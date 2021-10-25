@@ -26,26 +26,22 @@ public class GagnantServices {
     public GagnantServices() {
         cnx = MyConnection.getMyCnx().getConnection();
     }
-    
-    public void ajouterGagnant (Gagnant g){
+  
+    /**
+     *
+     * @param g
+     */
+    public void ajouterGagnant(Gagnant g){
         try {
-            String req = "INSERT INTO reclam (nom,prenom) values ('"+g.getNom()+"','"+g.getPrenom()+"')";
-            Statement st = (Statement) cnx.createStatement();
-            st.executeUpdate(req);
-            System.out.println(" gagnant added !");
-        } catch (SQLException ex) {
-            System.err.println(ex.getMessage());
-        }
-    }
-    
-    public void ajouterGagnant1(Gagnant g){
-        try {
-            String req = "INSERT INTO personne (nom,prenom) values (?,?)";
-            PreparedStatement pst = (PreparedStatement) cnx.prepareStatement(req);
-            pst.setString(1, g.getNom());
-            pst.setString(2, g.getPrenom());
+            String req = "INSERT INTO gagnants (Id_gagnant,Nom_gagnant,Prenom_gagnant,Adresse) values (?,?,?,?)";
+            PreparedStatement pst;
+            pst = (PreparedStatement) cnx.prepareStatement(req);
+            pst.setInt(1, g.getId_gagnant());
+            pst.setString(2, g.getNom_gagnant());
+             pst.setString(3, g.getPrenom_gagnant());
+            pst.setString(4, g.getAdresse());
             pst.executeUpdate();
-            System.out.println("gagnat added !");
+            System.out.println("gagnant added !");
         } catch (SQLException ex) {
             System.err.println(ex.getMessage());
         }
@@ -54,11 +50,11 @@ public class GagnantServices {
     public List<Gagnant> getGagnant(){
         List<Gagnant> Gagnants = new ArrayList<>();
         try {
-            String req = "Select * from gagnat";
+            String req = "Select * from gagnants";
             Statement st = (Statement) cnx.createStatement();
             ResultSet rs = st.executeQuery(req);
             while(rs.next()){
-                Gagnant g = new Gagnant(rs.getInt(1), rs.getString(2), rs.getString(3));
+                Gagnant g = new Gagnant(rs.getInt(1), rs.getString(2), rs.getString(3),rs.getString(4));
                 Gagnants.add(g);
             }
         } catch (SQLException ex) {
@@ -67,14 +63,13 @@ public class GagnantServices {
         return Gagnants;
     }
      public void modifierGagnant (Gagnant g){
-        String req="update set id_gagnant=?,nom_gagnant=?,prenom_gagnant=?,adresse=? " ;		
+        String req="update set Id_gagnant=?,Nom_gagnant=?,Prenom_gagnant=?,Adresse=? " ;		
         try { 
             PreparedStatement pst = (PreparedStatement) cnx.prepareStatement(req);
-            pst.setString(1, g.getNom());
-            pst.setString(2, g.getPrenom());
-           
-            
-           
+            pst.setInt(1, g.getId_gagnant());
+            pst.setString(2, g.getNom_gagnant());
+            pst.setString(3, g.getPrenom_gagnant());
+            pst.setString(4,g.getAdresse());
             pst.executeUpdate (); 
            System.out.println("Mise à jour effectuée avec succès");
         } catch (SQLException ex) {
@@ -82,12 +77,12 @@ public class GagnantServices {
         }
     
     }
-    public void supprimerGagnat ( String id_gagnant) {
+    public void supprimerGagnant ( String nom_gagnant) {
 
-        String req = "delete from gagnant where id_gagnant=?";
+        String req = "delete from gagnants where Id_gagnant=?";
         try {
             PreparedStatement pst = (PreparedStatement) cnx.prepareStatement(req);
-            pst.setString(1, id_gagnant);
+            pst.setString(1, nom_gagnant);
             pst.executeUpdate();
             System.out.println("Suppression effectuée avec succès");
         } catch (SQLException ex) {
