@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="transport.gui.Modifier_TransportController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="-14.0" layoutY="-8.0" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #B6C6CE;">
+         <children>
+            <Label layoutX="31.0" layoutY="129.0" prefHeight="17.0" prefWidth="74.0" text="Prix :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="171.0" prefHeight="24.0" prefWidth="52.0" text="Type :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="213.0" prefHeight="24.0" prefWidth="86.0" text="Disponibilite :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="249.0" prefHeight="31.0" prefWidth="86.0" text="Id Groupe :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="tfdestination" layoutX="22.0" layoutY="298.0" prefHeight="31.0" prefWidth="93.0" text="Destination :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="360.0" prefHeight="17.0" prefWidth="93.0" text="Stock :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="434.0" prefHeight="17.0" prefWidth="86.0" text="Image :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="234.0" layoutY="14.0" prefHeight="39.0" prefWidth="219.0" text="Modifier Transport" textFill="#0d032b">
+               <font>
+                  <Font name="Bauhaus 93" size="25.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tfprix1" layoutX="151.0" layoutY="122.0" maxWidth="167.0" minWidth="167.0" prefHeight="31.0" prefWidth="167.0" />
+            <JFXTextField fx:id="tfid_groupe1" layoutX="151.0" layoutY="249.0" maxWidth="167.0" minWidth="167.0" prefHeight="31.0" prefWidth="167.0" />
+            <JFXTextField fx:id="tfdestination1" layoutX="147.0" layoutY="298.0" maxWidth="175.0" minWidth="175.0" prefHeight="31.0" prefWidth="175.0" />
+            <JFXTextField fx:id="tfstock1" layoutX="147.0" layoutY="353.0" maxWidth="175.0" minWidth="175.0" prefHeight="31.0" prefWidth="175.0" />
+            <JFXButton fx:id="ftbutton1" layoutX="433.0" layoutY="225.0" onAction="#savetransport1" prefHeight="48.0" prefWidth="149.0" style="-fx-background-color: #1C1F23;" text="Valider" textFill="#d1cfda">
+               <font>
+                  <Font name="Arial Black" size="16.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="31.0" layoutY="81.0" prefHeight="31.0" prefWidth="23.0" text="ID">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tfid" layoutX="151.0" layoutY="74.0" maxWidth="167.0" minWidth="167.0" prefHeight="31.0" prefWidth="167.0" />
+            <JFXButton fx:id="ftbuttonback1" buttonType="RAISED" layoutX="22.0" layoutY="561.0" onAction="#back1" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #1C1F23;" text="  Back" textFill="#e2e1e8" />
+            <ImageView fx:id="tfimage1" fitHeight="114.0" fitWidth="200.0" layoutX="124.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true" />
+            <JFXButton fx:id="tfimageM" buttonType="RAISED" layoutX="148.0" layoutY="536.0" onAction="#modifierimage" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #1C1F23;" text="Modifier image" textFill="#d1cfda">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="440.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icon/update_64px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="152.0" layoutY="540.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icon/update_file_24px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="25.0" layoutY="565.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icon/back_24px.png" />
+               </image>
+            </ImageView>
+            <JFXComboBox fx:id="tftype1" layoutX="161.0" layoutY="171.0" prefHeight="25.0" prefWidth="149.0" />
+            <JFXComboBox fx:id="tfdisponibilite1" layoutX="161.0" layoutY="213.0" prefHeight="25.0" prefWidth="149.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

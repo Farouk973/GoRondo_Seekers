@@ -17,12 +17,12 @@ public class transport {
     private String id_groupe_tr;
     private String destination_tr;
     private int stock_tr;
-    private int image_tr ;
+    private String  image_tr ;
 
     public transport() {
     }
 
-    public transport(int id, float prix, String type, String disponibilite, String id_groupe, String destination, int stock, int image) {
+    public transport(int id, float prix, String type, String disponibilite, String id_groupe, String destination, int stock, String image) {
         this.id_tr = id;
         this.prix_tr = prix;
         this.type_tr = type;
@@ -32,7 +32,26 @@ public class transport {
         this.stock_tr = stock;
         this.image_tr = image;
     }
+    public transport( float prix, String type, String disponibilite, String id_groupe, String destination, int stock, String image) {
+        this.prix_tr = prix;
+        this.type_tr = type;
+        this.disponibilite_tr = disponibilite;
+        this.id_groupe_tr = id_groupe;
+        this.destination_tr = destination;
+        this.stock_tr = stock;
+        this.image_tr = image;
+    }
+     public transport( float prix, String type, String disponibilite, String id_groupe, String destination, int stock) {
+        this.prix_tr = prix;
+        this.type_tr = type;
+        this.disponibilite_tr = disponibilite;
+        this.id_groupe_tr = id_groupe;
+        this.destination_tr = destination;
+        this.stock_tr = stock;
+        
+    }
 
+    
    
     public int getId() {
         return id_tr;
@@ -90,11 +109,11 @@ public class transport {
         this.stock_tr = stock;
     }
 
-    public int getImage() {
+    public String getImage() {
         return image_tr;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         this.image_tr = image;
     }
 
@@ -130,40 +149,6 @@ public class transport {
         return true;
     }
 
-    public void setId_tr(int aInt) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setPrix_tr(float aFloat) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setType_tr(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setDisponibilite_tr(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setId_groupe_tr(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setDestination_tr(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setStock_tr(int aInt) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setImage_tr(int aInt) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
-    
  
     
 }
