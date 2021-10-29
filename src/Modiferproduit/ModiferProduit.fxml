@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Modiferproduit.ModiferProduitController">
+   <children>
+      <AnchorPane layoutX="20.0" layoutY="20.0" prefHeight="72.0" prefWidth="1372.0" style="-fx-background-color: black;">
+         <children>
+            <TextArea layoutX="217.0" layoutY="16.0" prefHeight="47.0" prefWidth="586.0" />
+            <JFXButton layoutX="12.0" layoutY="11.0" prefWidth="178.0" text="GoRando" textFill="#f3a847">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="28.0" />
+               </font>
+            </JFXButton>
+            <Pane layoutX="802.0" layoutY="16.0" prefHeight="47.0" prefWidth="49.0" style="-fx-background-color: #F3A847;">
+               <children>
+                  <ImageView fitHeight="38.0" fitWidth="41.0" layoutX="4.0" layoutY="5.0">
+                     <image>
+                        <Image url="@../Image/icons8_search_24px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="20.0" layoutY="165.0" prefHeight="747.0" prefWidth="1306.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="17.0" layoutY="48.0" prefHeight="38.0" prefWidth="129.0" text="nom">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="313.0" prefHeight="38.0" prefWidth="129.0" text="marque">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="875.0" layoutY="342.0" prefHeight="37.0" prefWidth="194.0" text="ajouter une image">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="NOMd" layoutX="267.0" layoutY="43.0" prefHeight="48.0" prefWidth="251.0" />
+            <ComboBox fx:id="categoryd" layoutX="267.0" layoutY="134.0" prefHeight="37.0" prefWidth="251.0" />
+            <TextArea fx:id="MARQUEd" layoutX="267.0" layoutY="308.0" prefHeight="48.0" prefWidth="251.0" />
+            <TextArea fx:id="PRIXd" layoutX="267.0" layoutY="395.0" prefHeight="53.0" prefWidth="251.0" />
+            <Pane layoutX="647.0" layoutY="34.0" prefHeight="274.0" prefWidth="625.0" style="-fx-background-color: white;">
+               <children>
+                  <JFXButton layoutX="274.0" layoutY="173.0" prefHeight="59.0" prefWidth="61.0" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="53.0" fitWidth="49.0">
+                           <image>
+                              <Image url="@../Image/icons8_add_30px_1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <JFXButton fx:id="valide" layoutX="926.0" layoutY="671.0" onAction="#CancelAjout" prefHeight="47.0" prefWidth="136.0" style="-fx-background-color: red;" text="cancel" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="modifer" layoutX="1099.0" layoutY="671.0" onAction="#ModiferM" prefHeight="47.0" prefWidth="136.0" style="-fx-background-color: #55CF8C;" text="Modifer" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="17.0" layoutY="134.0" prefHeight="38.0" prefWidth="129.0" text="categorie">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="395.0" prefHeight="38.0" prefWidth="129.0" text="prix">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="482.0" prefHeight="38.0" prefWidth="194.0" text="Nombre du produit">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="570.0" prefHeight="38.0" prefWidth="129.0" text="discription">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="Dscd" layoutX="262.0" layoutY="570.0" prefHeight="153.0" prefWidth="519.0" />
+            <Spinner fx:id="NombreProduitd" layoutX="323.0" layoutY="486.0" prefHeight="31.0" prefWidth="103.0" />
+            <Label layoutX="14.0" layoutY="220.0" prefHeight="38.0" prefWidth="178.0" text="Sous categorie">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="sousCategoryd" layoutX="262.0" layoutY="220.0" prefHeight="48.0" prefWidth="251.0" />
+         </children>
+      </Pane>
+      <JFXButton fx:id="RtourM" layoutX="24.0" layoutY="93.0" onAction="#RtourM" prefHeight="30.0" prefWidth="44.0" text=" ">
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@../Image/icons8_undo_26px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="ProfileM" contentDisplay="CENTER" layoutX="1306.0" layoutY="28.0" onAction="#ProfileM" prefHeight="40.0" prefWidth="30.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="47.0" fitWidth="49.0">
+               <image>
+                  <Image url="@../Image/icons8_user_32px_2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AffichageEquipement.AfficherProduitsController">
+   <children>
+      <JFXButton fx:id="btnFilter" layoutX="48.0" layoutY="122.0" onAction="#afficherPaneFIlter" prefHeight="47.0" prefWidth="136.0" style="-fx-background-color: #f3a847;" text="Filter" textFill="WHITE">
+         <font>
+            <Font name="Franklin Gothic Medium" size="30.0" />
+         </font>
+      </JFXButton>
+      <ImageView layoutX="149.0" layoutY="135.0">
+         <image>
+            <Image url="@../Image/icons8_filter_30px.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="72.0" prefWidth="1372.0" style="-fx-background-color: black;">
+         <children>
+            <TextArea layoutX="217.0" layoutY="16.0" prefHeight="47.0" prefWidth="586.0" />
+            <JFXButton layoutX="12.0" layoutY="11.0" prefWidth="178.0" text="GoRando" textFill="#f3a847">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="28.0" />
+               </font>
+            </JFXButton>
+            <Pane layoutX="802.0" layoutY="16.0" prefHeight="47.0" prefWidth="49.0" style="-fx-background-color: #F3A847;">
+               <children>
+                  <ImageView fitHeight="38.0" fitWidth="41.0" layoutX="4.0" layoutY="5.0">
+                     <image>
+                        <Image url="@../Image/icons8_search_24px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <JFXButton contentDisplay="CENTER" layoutX="1279.0" layoutY="7.0" onAction="#ProfilProduit" prefHeight="40.0" prefWidth="30.0" text=" ">
+               <graphic>
+                  <ImageView fitHeight="47.0" fitWidth="49.0">
+                     <image>
+                        <Image url="@../Image/icons8_user_32px_2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="Ajouteeee" layoutX="1107.0" layoutY="11.0" onAction="#ajouteeee" prefHeight="38.0" prefWidth="143.0" ripplerFill="#40d072" text="Vender" textFill="#f3a847">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Pane fx:id="pane1" layoutX="84.0" layoutY="185.0" onMouseClicked="#InfoProduit" onMouseEntered="#MouseChange" onMouseExited="#MouseChange" prefHeight="313.0" prefWidth="337.0">
+         <children>
+            <ImageView fitHeight="172.0" fitWidth="289.0" layoutX="24.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/Forest.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="16.0" layoutY="191.0" prefHeight="34.0" prefWidth="274.0" text="chadsdf" textOverrun="CLIP">
+               <font>
+                  <Font name="Consolas" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="231.0" prefHeight="34.0" prefWidth="274.0" text="Label">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="248.0" prefHeight="74.0" prefWidth="274.0" text="Label">
+               <font>
+                  <Font name="Consolas" size="17.0" />
+               </font>
+            </Label>
+            <Line endX="225.0" layoutX="107.0" layoutY="311.0" startX="-96.5" startY="-1.5" />
+            <Line endX="-99.5" endY="310.5" layoutX="432.0" startX="-100.0" />
+            <Line endX="221.29290771484375" endY="-0.707122802734375" layoutX="110.0" startX="-100.0" />
+            <Line endX="-100.0" endY="307.0" layoutX="110.0" layoutY="2.0" startX="-100.0" />
+            <Label layoutX="18.0" layoutY="162.0" prefHeight="30.0" prefWidth="326.0" text="Label" textFill="#4e4eff">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="id1" layoutX="287.0" layoutY="184.0" text="Label" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane2" layoutX="481.0" layoutY="185.0" onMouseClicked="#InfoProduit" onMouseEntered="#MouseChange" onMouseExited="#MouseChange" prefHeight="313.0" prefWidth="337.0">
+         <children>
+            <ImageView fitHeight="172.0" fitWidth="289.0" layoutX="24.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/Forest.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="16.0" layoutY="191.0" prefHeight="34.0" prefWidth="274.0" text="chadsdf" textOverrun="CLIP">
+               <font>
+                  <Font name="Consolas" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="231.0" prefHeight="34.0" prefWidth="274.0" text="Label">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="248.0" prefHeight="74.0" prefWidth="274.0" text="Label">
+               <font>
+                  <Font name="Consolas" size="17.0" />
+               </font>
+            </Label>
+            <Line endX="225.0" layoutX="107.0" layoutY="311.0" startX="-96.5" startY="-1.5" />
+            <Line endX="-99.5" endY="310.5" layoutX="432.0" startX="-100.0" />
+            <Line endX="221.29290771484375" endY="-0.707122802734375" layoutX="110.0" startX="-100.0" />
+            <Line endX="-100.0" endY="307.0" layoutX="110.0" layoutY="2.0" startX="-100.0" />
+            <Label layoutX="18.0" layoutY="163.0" prefHeight="30.0" prefWidth="326.0" text="Label" textFill="#4e4eff">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="id2" layoutX="265.0" layoutY="181.0" text="Label" visible="false" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane3" layoutX="871.0" layoutY="185.0" onMouseClicked="#InfoProduit" onMouseEntered="#MouseChange" onMouseExited="#MouseChange" prefHeight="313.0" prefWidth="337.0">
+         <children>
+            <ImageView fitHeight="172.0" fitWidth="289.0" layoutX="24.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/Forest.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="16.0" layoutY="191.0" prefHeight="34.0" prefWidth="274.0" text="chadsdf" textOverrun="CLIP">
+               <font>
+                  <Font name="Consolas" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="231.0" prefHeight="34.0" prefWidth="274.0" text="Label">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="248.0" prefHeight="74.0" prefWidth="274.0" text="Label">
+               <font>
+                  <Font name="Consolas" size="17.0" />
+               </font>
+            </Label>
+            <Line endX="225.0" layoutX="107.0" layoutY="311.0" startX="-96.5" startY="-1.5" />
+            <Line endX="-99.5" endY="310.5" layoutX="432.0" startX="-100.0" />
+            <Line endX="221.29290771484375" endY="-0.707122802734375" layoutX="110.0" startX="-100.0" />
+            <Line endX="-100.0" endY="307.0" layoutX="110.0" layoutY="2.0" startX="-100.0" />
+            <Label layoutX="18.0" layoutY="163.0" prefHeight="30.0" prefWidth="326.0" text="Label" textFill="#4e4eff">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="id3" layoutX="237.0" layoutY="168.0" text="Label" visible="false" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane4" layoutX="84.0" layoutY="511.0" onMouseClicked="#InfoProduit" onMouseEntered="#MouseChange" onMouseExited="#MouseChange" prefHeight="313.0" prefWidth="337.0">
+         <children>
+            <ImageView fitHeight="172.0" fitWidth="289.0" layoutX="24.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/Forest.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="16.0" layoutY="191.0" prefHeight="34.0" prefWidth="274.0" text="chadsdf" textOverrun="CLIP">
+               <font>
+                  <Font name="Consolas" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="231.0" prefHeight="34.0" prefWidth="274.0" text="Label">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="248.0" prefHeight="74.0" prefWidth="274.0" text="Label">
+               <font>
+                  <Font name="Consolas" size="17.0" />
+               </font>
+            </Label>
+            <Line endX="225.0" layoutX="107.0" layoutY="311.0" startX="-96.5" startY="-1.5" />
+            <Line endX="-99.5" endY="310.5" layoutX="432.0" startX="-100.0" />
+            <Line endX="221.29290771484375" endY="-0.707122802734375" layoutX="110.0" startX="-100.0" />
+            <Line endX="-100.0" endY="307.0" layoutX="110.0" layoutY="2.0" startX="-100.0" />
+            <Label layoutX="18.0" layoutY="163.0" prefHeight="30.0" prefWidth="326.0" text="Label" textFill="#4e4eff">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="id4" layoutX="274.0" layoutY="183.0" text="Label" visible="false" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane5" layoutX="481.0" layoutY="511.0" onMouseClicked="#InfoProduit" onMouseEntered="#MouseChange" onMouseExited="#MouseChange" prefHeight="313.0" prefWidth="337.0">
+         <children>
+            <ImageView fitHeight="172.0" fitWidth="289.0" layoutX="24.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/Forest.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="16.0" layoutY="191.0" prefHeight="34.0" prefWidth="274.0" text="chadsdf" textOverrun="CLIP">
+               <font>
+                  <Font name="Consolas" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="231.0" prefHeight="34.0" prefWidth="274.0" text="Label">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="248.0" prefHeight="74.0" prefWidth="274.0" text="Label">
+               <font>
+                  <Font name="Consolas" size="17.0" />
+               </font>
+            </Label>
+            <Line endX="225.0" layoutX="107.0" layoutY="311.0" startX="-96.5" startY="-1.5" />
+            <Line endX="-99.5" endY="310.5" layoutX="432.0" startX="-100.0" />
+            <Line endX="221.29290771484375" endY="-0.707122802734375" layoutX="110.0" startX="-100.0" />
+            <Line endX="-100.0" endY="307.0" layoutX="110.0" layoutY="2.0" startX="-100.0" />
+            <Label layoutX="18.0" layoutY="163.0" prefHeight="30.0" prefWidth="326.0" text="Label" textFill="#4e4eff">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="id5" layoutX="261.0" layoutY="178.0" text="Label" visible="false" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane6" layoutX="871.0" layoutY="511.0" onMouseClicked="#InfoProduit" onMouseEntered="#MouseChange" onMouseExited="#MouseChange" prefHeight="313.0" prefWidth="337.0">
+         <children>
+            <ImageView fitHeight="172.0" fitWidth="289.0" layoutX="24.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/Forest.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="16.0" layoutY="191.0" prefHeight="34.0" prefWidth="274.0" text="chadsdf" textOverrun="CLIP">
+               <font>
+                  <Font name="Consolas" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="231.0" prefHeight="34.0" prefWidth="274.0" text="Label">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="248.0" prefHeight="74.0" prefWidth="274.0" text="Label">
+               <font>
+                  <Font name="Consolas" size="17.0" />
+               </font>
+            </Label>
+            <Line endX="225.0" layoutX="107.0" layoutY="311.0" startX="-96.5" startY="-1.5" />
+            <Line endX="-99.5" endY="310.5" layoutX="432.0" startX="-100.0" />
+            <Line endX="221.29290771484375" endY="-0.707122802734375" layoutX="110.0" startX="-100.0" />
+            <Line endX="-100.0" endY="307.0" layoutX="110.0" layoutY="2.0" startX="-100.0" />
+            <Label layoutX="18.0" layoutY="163.0" prefHeight="30.0" prefWidth="326.0" text="Label" textFill="#4e4eff">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="id6" layoutX="274.0" layoutY="188.0" text="Label" visible="false" />
+         </children>
+      </Pane>
+      <Label layoutX="631.0" layoutY="850.0" text="Page">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="comboPage" layoutX="694.0" layoutY="843.0" onAction="#nextPage" prefHeight="34.0" prefWidth="136.0" promptText="page " />
+      <JFXButton fx:id="RtoureB" layoutX="6.0" layoutY="76.0" onAction="#RtoureB" prefHeight="30.0" prefWidth="44.0" text=" ">
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@../Image/icons8_undo_26px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Pane fx:id="paneFilter" layoutX="47.0" layoutY="178.0" prefHeight="454.0" prefWidth="591.0" style="-fx-background-color: #CDCDCD;">
+         <children>
+            <JFXButton layoutX="548.0" onAction="#CancelFiltrage" text="X" textFill="#c62222">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="41.0" layoutY="21.0" prefHeight="38.0" prefWidth="96.0" text="Prix :">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="minEntry" layoutX="171.0" layoutY="21.0" prefHeight="0.0" prefWidth="143.0" />
+            <TextArea fx:id="maxEntry" layoutX="398.0" layoutY="21.0" prefHeight="40.0" prefWidth="143.0" />
+            <Label layoutX="125.0" layoutY="26.0" prefHeight="38.0" prefWidth="96.0" text="min">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="343.0" layoutY="26.0" prefHeight="38.0" prefWidth="44.0" text="max">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="167.0" prefHeight="40.0" prefWidth="121.0" text="Marque :">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Pane fx:id="paneMarque" layoutX="184.0" layoutY="175.0" prefHeight="151.0" prefWidth="377.0">
+               <children>
+                  <JFXCheckBox fx:id="M" contentDisplay="CENTER" layoutX="11.0" layoutY="-5.0" onAction="#FiltrageParMarqueTous" prefHeight="28.0" prefWidth="160.0" text="Tous">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="M1" contentDisplay="CENTER" layoutX="14.0" layoutY="25.0" onAction="#FiltrageParMarque" prefHeight="19.0" prefWidth="160.0" text="M1">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="M2" layoutX="14.0" layoutY="51.0" onAction="#FiltrageParMarque" prefHeight="14.0" prefWidth="160.0" text="M1">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="M3" layoutX="14.0" layoutY="74.0" onAction="#FiltrageParMarque" prefHeight="28.0" prefWidth="160.0" text="M1">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="M4" layoutX="14.0" layoutY="99.0" onAction="#FiltrageParMarque" prefHeight="21.0" prefWidth="160.0" text="M1">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="M5" layoutX="14.0" layoutY="124.0" onAction="#FiltrageParMarque" prefHeight="19.0" prefWidth="160.0" text="M1">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="M6" layoutX="203.0" layoutY="23.0" onAction="#FiltrageParMarque" prefHeight="30.0" prefWidth="160.0" text="M1">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="M7" layoutX="203.0" layoutY="48.0" onAction="#FiltrageParMarque" prefHeight="30.0" prefWidth="160.0" text="M1">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="M8" layoutX="203.0" layoutY="72.0" onAction="#FiltrageParMarque" prefHeight="30.0" prefWidth="160.0" text="M1">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="M9" layoutX="203.0" layoutY="96.0" onAction="#FiltrageParMarque" prefHeight="30.0" prefWidth="160.0" text="M1">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="M10" layoutX="203.0" layoutY="121.0" onAction="#FiltrageParMarque" prefHeight="30.0" prefWidth="160.0" text="M1">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </JFXCheckBox>
+               </children></Pane>
+            <Label layoutX="25.0" layoutY="348.0" prefHeight="45.0" prefWidth="151.0" text="Condition :">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <JFXCheckBox layoutX="184.0" layoutY="354.0" prefHeight="30.0" prefWidth="160.0" text="New">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox layoutX="184.0" layoutY="380.0" prefHeight="30.0" prefWidth="160.0" text="Renewed">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox layoutX="184.0" layoutY="406.0" prefHeight="30.0" prefWidth="160.0" text="Used">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXButton layoutX="487.0" layoutY="378.0" onAction="#FiltrageOk" prefHeight="38.0" prefWidth="90.0" style="-fx-background-color: #f3a847;" text="Ok" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="30.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="18.0" layoutY="99.0" prefHeight="40.0" prefWidth="207.0" text="Sous categorie :">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="SousCategoryCombo" layoutX="267.0" layoutY="102.0" onAction="#SousCategorieChange" prefHeight="34.0" prefWidth="236.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
