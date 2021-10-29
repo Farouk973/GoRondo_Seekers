@@ -13,8 +13,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableCell;
+import javafx.scene.control.TableColumn;
 import transport.entities.transport;
 import transport.utils.MyConnection;
 
@@ -29,19 +32,43 @@ public class transportService {
         cnx = MyConnection.getMyCnx().getConnection();
     }
     
+    /*public ObservableList<transport> search(String cas) throws SQLException {
+                            ObservableList<transport> list = FXCollections.observableArrayList();
+
+            String requete = "select * from transport_ where  id_tr LIKE '%" + cas + "%' or prix_tr LIKE '%" + cas+ "%' or type_tr LIKE '%" + cas + "%' or disponiblite_tr LIKE '%" + cas+ "%' or id_groupe_tr LIKE '%" + cas+ "%' or destination_tr LIKE '%"+ cas+ "%' or stock_tr LIKE '%"+ cas+ "%' or image_tr LIKE '%"+ cas + "%' ";
+        try {
+            PreparedStatement ps = cnx.prepareStatement(requete);
+            ResultSet tr = ps.executeQuery();
+
+            while (tr.next()) {
+        
+list.add(new transport(tr.getInt("id_tr"),tr.getFloat("prix_tr"),tr.getString("type_tr"),tr.getString("disponiblite_tr"),tr.getString("id_groupe_tr"),tr.getString("destination_tr"),tr.getInt("stock_tr"),tr.getString("image_tr")));
+             
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+       return list;
     
+    
+    
+    
+    
+    
+    
+    }*/
     public void ajoutertransport(transport t){
         try {
-            String req = "INSERT INTO transport_ (id,prix,type,disponibilite,id_groupe,destination,stock,image) values (?,?,?,?,?,?,?,?)";
+            String req = "INSERT INTO transport_ (prix_tr,type_tr,disponiblite_tr,id_groupe_tr,destination_tr,stock_tr,image_tr) values (?,?,?,?,?,?,?)";
             PreparedStatement pst = (PreparedStatement) cnx.prepareStatement(req);
-            pst.setInt(1, t.getId());
-            pst.setFloat(2, t.getPrix());
-            pst.setString(3, t.getType());
-            pst.setString(4, t.getDisponibilite());
-            pst.setString(5, t.getId_groupe());
-            pst.setString(6, t.getDestination());
-            pst.setInt(7, t.getStock());
-            pst.setInt(8, t.getImage());
+            pst.setFloat(1, t.getPrix());
+            pst.setString(2, t.getType());
+            pst.setString(3, t.getDisponibilite());
+            pst.setString(4, t.getId_groupe());
+            pst.setString(5, t.getDestination());
+            pst.setInt(6, t.getStock());
+            pst.setString(7, t.getImage());
+            pst.executeUpdate();
             
             System.out.println("Transport added !");
         } catch (SQLException ex) {
@@ -51,68 +78,129 @@ public class transportService {
     
     
     
-    
-    
-    
-    public void modifiertransport()  {
-        System.out.println("entre Id de transport a Modifier");
-        Scanner sc = new Scanner(System.in);
-        String a = sc.nextLine();
-        System.out.println("entre le transport a Modifier");
-        Scanner sc1 = new Scanner(System.in);
-        String b = sc1.nextLine();
-      try {
-     // String sql = "update user set Nom_User ="+b+"where Id_User ="+a;
-     String sql = "UPDATE produit SET Nom_transport ='"+b+"' WHERE transport.`Id_transport` ="+a;
-            PreparedStatement ste = cnx.prepareStatement(sql);
-      ste.executeUpdate();
-  }catch (SQLException ex) { System.out.println(ex);
-}}
+      
+    public void modifiertransport(transport t)  {
+        String req="update transport_ set prix_tr=?,type_tr=?,disponiblite_tr=?,id_groupe_tr=?,destination_tr=?,stock_tr=?,image_tr=? where id_tr=? " ;
+        try { 
+            PreparedStatement pst = (PreparedStatement) cnx.prepareStatement(req);
+            pst.setFloat(1, t.getPrix());
+            pst.setString(2, t.getType());
+            pst.setString(3, t.getDisponibilite());
+            pst.setString(4, t.getId_groupe());
+            pst.setString(5, t.getDestination());
+            pst.setInt(6, t.getStock());
+            pst.setString(7, t.getImage());
+            pst.setInt(8,t.getId());
+            pst.executeUpdate (); 
+           System.out.println("Mise à jour effectuée avec succès");
+        } catch (SQLException ex) {
+            System.out.println("erreur lors de la mise à jour " + ex.getMessage());
+        }
+        
+}
 
 
-    public void supprimertransport()  {
+    public void supprimertransport(int id_tr)  {
+    String req = "delete from transport_ where id_tr=?";
         try {
-        System.out.println("entre l Id de transport a supprimer");
-        Scanner sc5 = new Scanner(System.in);
-        String f = sc5.nextLine();
+             PreparedStatement pst = (PreparedStatement) cnx.prepareStatement(req);
+            pst.setInt(1, id_tr);
+            pst.executeUpdate();
+            System.out.println("Suppression effectuée avec succès");
+        } catch (SQLException ex) {
+            
+            System.out.println("erreur lors de la suppression " + ex.getMessage());
+        }
+}
+   public transport getTransport(int i)
+   {
+       transport t = new transport();
+        int nombre = 0;
+      String requete = "SELECT * FROM transport_"       ;
+         try {
+            PreparedStatement ps = cnx.prepareStatement(requete);
+            ResultSet rs = ps.executeQuery();
 
-      String sql = "delete from transport where Id_transport="+f;
-            PreparedStatement ste = cnx.prepareStatement(sql);
-      ste.executeUpdate();
-  }catch (SQLException ex) { System.out.println(ex);
-}}
+            while (rs.next()) {
+                if (i == nombre) {
+                  
+    t.setPrix(rs.getFloat("prix_tr"));
+    t.setType(rs.getString("type_tr"));
+     
+    t.setDisponibilite(rs.getString("disponiblite_tr"));
+    t.setId_groupe(rs.getString("id_groupe_tr"));
+    t.setDestination(rs.getString("destination_tr"));
+    t.setStock(rs.getInt("stock_tr"));
+     
+               
+                }
+                nombre++;
+                         }
 
-public void affichertransport() throws SQLException
+        } catch (SQLException ex) {
+            System.out.println(ex.getCause());
+        }
+        return t;
+   }
+public ObservableList<transport> affichertransport() throws SQLException
 {
-    List<transport> tr = new ArrayList<>();
+ 
+       ObservableList<transport> tr = FXCollections.observableArrayList();
         try {
+        
 
-String sql = "Select * from transport ";
+String sql = "Select * from transport_ ";
 ResultSet rs;
         PreparedStatement ste = cnx.prepareStatement(sql);
 rs = ste.executeQuery();
-
+  
 while (rs.next()){
     transport t = new transport ();
-    t.setId_tr(rs.getInt(1));
-    t.setPrix_tr(rs.getFloat(2));
-    t.setType_tr(rs.getString(3));
-    t.setDisponibilite_tr(rs.getString(4));
-    t.setId_groupe_tr(rs.getString(5));
-    t.setDestination_tr(rs.getString(6));
-    t.setStock_tr(rs.getInt(7));
-    t.setImage_tr(rs.getInt(8));
+    t.setId(rs.getInt("id_tr"));
+    t.setPrix(rs.getFloat("prix_tr"));
+    t.setType(rs.getString("type_tr"));
+    t.setDisponibilite(rs.getString("disponiblite_tr"));
+    t.setId_groupe(rs.getString("id_groupe_tr"));
+    t.setDestination(rs.getString("destination_tr"));
+    t.setStock(rs.getInt("stock_tr"));
+
     
     tr.add(t);
-}}
-catch (SQLException ex) {Logger.getLogger(transportService.class.getName()).log(Level.SEVERE, null, ex);
-
-}System.out.println(tr);
 }
+        }
+catch (SQLException ex) {
+
+
+            System.out.println("erreur lors de l'affichage " + ex.getMessage());
+
+}
+        return tr;
+}
+
+
+}
+    
+        
+
+
+    
+    
+
+    
+
+
 
    
 
-}
     
+   
+
+
+    
+
+
+
+
+
     
     
