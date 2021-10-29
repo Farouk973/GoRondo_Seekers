@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="571.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="payer.esprit.gui.Interface_panierController">
+   <children>
+      <Button fx:id="btn_consulter_commande" layoutX="389.0" layoutY="401.0" mnemonicParsing="false" onAction="#getCommande" prefHeight="51.0" prefWidth="160.0" text="Consulter votre commande" textFill="#ff6a00" />
+      <Label layoutX="129.0" layoutY="133.0" prefHeight="45.0" prefWidth="103.0" text="Produit">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="403.0" layoutY="133.0" prefHeight="45.0" prefWidth="151.0" text="Type du produit">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="311.0" prefHeight="45.0" prefWidth="151.0" text="Insérer quantité:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="687.0" layoutY="133.0" prefHeight="45.0" prefWidth="188.0" text="Prix unitaire ( en DT)">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_prixtotale_panier" editable="false" layoutX="681.0" layoutY="311.0" prefHeight="45.0" prefWidth="217.0" />
+      <Button fx:id="btn_cancel_panier" layoutX="41.0" layoutY="507.0" mnemonicParsing="false" onAction="#getRetour" prefHeight="45.0" prefWidth="124.0" text="Retour" textFill="#ff6a00" />
+      <TextField fx:id="tf_produit_panier" editable="false" layoutX="61.0" layoutY="211.0" prefHeight="45.0" prefWidth="238.0" />
+      <TextField fx:id="tf_type_panier" editable="false" layoutX="362.0" layoutY="211.0" prefHeight="45.0" prefWidth="238.0" />
+      <TextField fx:id="tf_insererquantite_panier" layoutX="273.0" layoutY="311.0" prefHeight="45.0" prefWidth="132.0" />
+      <TextField fx:id="tf_prixunitaire_panier" editable="false" layoutX="671.0" layoutY="211.0" prefHeight="45.0" prefWidth="238.0" />
+      <Label layoutX="393.0" layoutY="69.0" prefHeight="45.0" prefWidth="176.0" text="Votre article" textFill="#ff6a00">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_prixtotale_panier" layoutX="458.0" layoutY="311.0" mnemonicParsing="false" onAction="#calc" prefHeight="45.0" prefWidth="160.0" text="Calculer le prix total" textFill="#ff6a00" />
+      <Button fx:id="btn_acheter_panier" layoutX="803.0" layoutY="507.0" mnemonicParsing="false" onAction="#getEng2" prefHeight="45.0" prefWidth="124.0" text="Achéter" textFill="#ff6a00" />
+      <AnchorPane layoutX="-2.0" prefHeight="69.0" prefWidth="960.0" style="-fx-background-color: black;">
+         <children>
+            <Label layoutX="392.0" layoutY="9.0" prefHeight="45.0" prefWidth="176.0" text="Go Rando" textFill="#ff6a00">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
