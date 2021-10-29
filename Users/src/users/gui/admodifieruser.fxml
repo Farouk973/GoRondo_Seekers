@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="users.gui.AdmodifieruserController">
+   <children>
+      <AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white;">
+         <children>
+            <JFXButton layoutX="633.0" layoutY="617.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#Enregistrermod" prefHeight="37.0" prefWidth="140.0" style="-fx-background-color: #FBA918;" text="Enregistrer" textFill="#e8e1e1">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="386.0" layoutY="617.0" onAction="#resetmod" prefHeight="37.0" prefWidth="140.0" style="-fx-background-color: #FBA918;" text="Reset" textFill="#e4dfdf">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="287.0" layoutY="164.0" text="Nom:" textFill="#1b1a1a">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="274.0" layoutY="237.0" text="Prenom:" textFill="#070707">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="287.0" layoutY="316.0" text="CIN:" textFill="#070707">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="287.0" layoutY="387.0" text="Mail:" textFill="#070707">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="Nommod" layoutX="339.0" layoutY="146.0" />
+            <JFXTextField fx:id="prenommod" layoutX="339.0" layoutY="219.0" />
+            <JFXTextField fx:id="cinmod" layoutX="339.0" layoutY="298.0" />
+            <JFXTextField fx:id="mailmod" layoutX="339.0" layoutY="369.0" />
+            <Label layoutX="600.0" layoutY="316.0" text="age:" textFill="#070707">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="629.0" layoutY="237.0" />
+            <Label layoutX="610.0" layoutY="390.0" text="sexe:" textFill="#070707">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="544.0" layoutY="237.0" text="mot de passe:" textFill="#1b1a1a">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="629.0" layoutY="316.0" />
+            <Label layoutX="544.0" layoutY="164.0" text="Username:" textFill="#1b1a1a">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="277.0" layoutY="478.0" text="Adress:" textFill="#070707">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="pswmod" layoutX="649.0" layoutY="219.0" />
+            <JFXTextField fx:id="usernamemod" layoutX="646.0" layoutY="146.0" />
+            <Label layoutX="579.0" layoutY="478.0" text="Telephone:" textFill="#070707">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="telephonemod" layoutX="655.0" layoutY="460.0" />
+            <AnchorPane prefHeight="66.0" prefWidth="1200.0" style="-fx-background-color: black;">
+               <children>
+                  <JFXButton layoutX="-15.0" layoutY="10.0" onAction="#backmod" prefHeight="46.0" prefWidth="111.0" text="Back">
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/back_64px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Label layoutX="539.0" layoutY="14.0" prefHeight="38.0" prefWidth="191.0" text="Modifier" textFill="#ffa100">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <JFXComboBox fx:id="sexemod" layoutX="665.0" layoutY="375.0" prefHeight="31.0" prefWidth="187.0" />
+            <Label fx:id="modifflabel" layoutX="522.0" layoutY="695.0" prefHeight="38.0" prefWidth="208.0" textFill="#4400ff" />
+            <JFXTextField fx:id="agemod" layoutX="649.0" layoutY="298.0" />
+            <JFXTextField fx:id="adressmod" layoutX="339.0" layoutY="460.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

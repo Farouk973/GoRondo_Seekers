@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="users.gui.Admin1Controller">
+   <children>
+      <BorderPane fx:id="bp" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800.0" prefWidth="1200.0">
+         <top>
+            <AnchorPane prefHeight="51.0" prefWidth="850.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="28.0" layoutY="2.0" prefHeight="51.0" prefWidth="1172.0" style="-fx-background-color: #131927;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="1170.0" layoutY="15.0" text="X" textFill="#cd0b0b">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="Bar1" layoutX="14.0" layoutY="10.0" onMouseClicked="#run1" text="Menu" textFill="#ff5e00">
+                           <graphic>
+                              <ImageView fitHeight="29.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/home_32px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="Bar2" layoutX="14.0" layoutY="10.0" onMouseClicked="#run2" text="Menu" textFill="#ff7300">
+                           <graphic>
+                              <ImageView fitHeight="29.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/home_32px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane fx:id="slider" prefHeight="522.0" prefWidth="208.0" style="-fx-background-color: #202E3F;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutY="234.0" prefHeight="168.0" prefWidth="208.0" AnchorPane.bottomAnchor="347.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="234.0">
+                     <children>
+                        <JFXButton onAction="#adAjouter" prefHeight="30.0" prefWidth="176.0" text="Ajouter" textFill="#ff7300">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/add_user_male_50px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton onAction="#adSupprimer" prefHeight="30.0" prefWidth="176.0" text="Supprimer" textFill="#ff7300">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/delete_user_male_50px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton onAction="#AdModifier" prefHeight="30.0" prefWidth="176.0" text="Modifier" textFill="#ff7300">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/registration_32px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton onAction="#affiche_menu" prefHeight="30.0" prefWidth="176.0" text="Affichier" textFill="#ff7300">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/show_property_50px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <JFXButton layoutX="14.0" layoutY="680.0" onAction="#Deconnectadmin" prefHeight="40.0" prefWidth="181.0" text="Deconnecter" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Italic" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/back_64px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane fx:id="ap" prefHeight="426.0" prefWidth="992.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="442.0" layoutY="364.0" text="Bienvenue admin" textFill="RED" />
+               </children></AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
