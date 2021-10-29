@@ -1,0 +1,19 @@
+
+/* 
+    Created on : 27 oct. 2021, 03:47:21
+    Author     : user
+*/
+.button{
+    -fx-background-color:#F68A1F;
+    -fx-background-radius:#2C3C47 ;
+}
+.button:hover{
+    -fx-background-color:#DBE022;
+    -fx-background-radius:#2C3C47 ;
+}
+.button:pressed{
+    -fx-background-color:#0BA9B7;
+    -fx-background-radius:#0BA9B7 ;
+}Vbox{
+    -fx-background-color:#8A8A8A;
+}

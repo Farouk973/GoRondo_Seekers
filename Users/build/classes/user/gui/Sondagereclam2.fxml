@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="532.0" prefWidth="585.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InterfaceReclamation.gui.Sondagereclam2Controller">
+   <children>
+      <AnchorPane layoutX="458.0" layoutY="3.0" prefHeight="525.0" prefWidth="66.0">
+         <children>
+            <JFXButton fx:id="clickme" layoutX="22.0" layoutY="423.0" onAction="#clickme" prefHeight="82.0" prefWidth="96.0" style="-fx-background-color: #F68A1F; -fx-background-radius: 300;" text="Gagner" textAlignment="JUSTIFY" />
+         </children>
+         <opaqueInsets>
+            <Insets right="30.0" top="10.0" />
+         </opaqueInsets>
+      </AnchorPane>
+      <ImageView fitHeight="479.0" fitWidth="337.0" layoutX="36.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../build/classes/image/246641121_572444850643388_4423270503607166325_n.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
