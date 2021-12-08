@@ -1,0 +1,40 @@
+<div class="col-md-8">
+    <div class="contact-form">
+        {{ form_start(form) }}
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                        {{ form_widget(form.nomReclam) }}
+                    </fieldset>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                        {{ form_widget(form.prenomReclam) }}
+                    </fieldset>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                        {{ form_widget(form.adresseReclam) }}
+                    </fieldset>
+                </div>
+                <div class="col-lg-12">
+                    <fieldset>
+                        {{ form_widget(form.Reclam) }}
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                        {{ form_row(form.captchaCode) }}
+
+                        </div>
+                    </fieldset>
+                </div>
+
+
+                    <fieldset>
+                        <button class="filled-button">{{ button_label|default('Save') }}</button>
+                    </fieldset>
+                </div>
+            </div>
+            </div>
+        {{ form_end(form) }}
+
+    </div>
+</div>
