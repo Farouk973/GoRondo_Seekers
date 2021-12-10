@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rondo{% endblock %}
+
+{% block body %}
+    <h1>Rondo</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ rondo.id }}</td>
+            </tr>
+            <tr>
+                <th>TypeActivite</th>
+                <td>{{ rondo.typeActivite }}</td>
+            </tr>
+            <tr>
+                <th>LieuxEvent</th>
+                <td>{{ rondo.lieuxEvent }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ rondo.prix }}</td>
+            </tr>
+            <tr>
+                <th>IdTransport</th>
+                <td>{{ rondo.idTransport }}</td>
+            </tr>
+            <tr>
+                <th>Duree</th>
+                <td>{{ rondo.duree }}</td>
+            </tr>
+            <tr>
+                <th>Groupe</th>
+                <td>{{ rondo.groupe }}</td>
+            </tr>
+            <tr>
+                <th>DateEvent</th>
+                <td>{{ rondo.dateEvent }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('rondo2_index') }}">back to list</a>
+
+    <a href="{{ path('rondo2_edit', {'id': rondo.id}) }}">edit</a>
+
+    {{ include('rondo2/_delete_form.html.twig') }}
+{% endblock %}

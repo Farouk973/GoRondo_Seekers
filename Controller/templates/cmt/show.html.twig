@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cmt{% endblock %}
+
+{% block body %}
+    <h1>Cmt</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ cmt.id }}</td>
+            </tr>
+            <tr>
+                <th>Commentaire</th>
+                <td>{{ cmt.commentaire }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('cmt_index') }}">back to list</a>
+
+    <a href="{{ path('cmt_edit', {'id': cmt.id}) }}">edit</a>
+
+    {{ include('cmt/_delete_form.html.twig') }}
+{% endblock %}

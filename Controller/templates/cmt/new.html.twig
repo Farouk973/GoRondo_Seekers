@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Cmt{% endblock %}
+
+{% block body %}
+    <h1>Create new Cmt</h1>
+
+    {{ include('cmt/_form.html.twig') }}
+
+    <a href="{{ path('cmt_index') }}">back to list</a>
+{% endblock %}
